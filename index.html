@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Information of Element</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+    }
+    .username-screen, .main-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .main-screen {
+      display: none;
+    }
+    h1 {
+      color: #222;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .surface {
+      margin-top: 30px;
+      width: 70%;
+      min-height: 300px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+    .version-label {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 12px;
+  color: #666;
+}
+  </style>
+</head>
+<body>
+
+<div class="username-screen">
+  <h1>Welcome to Information of Element</h1>
+  <p>Please enter your name to continue:</p>
+  <input type="text" id="usernameInput" placeholder="Enter your name">
+  <button onclick="enterSite()">Enter</button>
+</div>
+
+<div class="main-screen">
+  <h1 id="welcomeText">Hello!</h1>
+  <div class="button-group">
+    <button onclick="loadContent('modern')">Modern Periodic Table</button>
+    <button onclick="loadContent('fullform')">Only in Full Form</button>
+    <button onclick="loadContent('short2full')">Short Form to Full Form</button>
+    <button onclick="loadContent('full2short')">Full Form to Short Form</button>
+    <button onclick="loadContent('elementdetails')">Element Details</button>
+    <button onclick="loadContent('webinfo')">Web Info</button>
+    <button onclick="loadContent('creatorinfo')">Creator Info</button>
+  </div>
+  <div class="surface" id="surface">
+    <!-- Dynamic content will appear here -->
+  </div>
+</div>
+
+<script>
+  function enterSite() {
+    const name = document.getElementById('usernameInput').value.trim();
+    if (name) {
+      document.querySelector('.username-screen').style.display = 'none';
+      document.querySelector('.main-screen').style.display = 'flex';
+      document.getElementById('welcomeText').textContent = `Welcome, ${name}!`;
+    }
+  }
+
+  function loadContent(type) {
+    const surface = document.getElementById('surface');
+    if (type === 'modern') {
+      surface.innerHTML = `<h3>Modern Periodic Table</h3><img src="table.png" alt="Modern Periodic Table" style="width:400%;max-width:900px;">`+`<div class="version-label">V:1E.01</div>`;
+    } else if (type === 'fullform') {
+      surface.innerHTML = `<h3>All Elements (Only in Full Form)<img src="table1.png" alt="All Elements in Full Form" style="width:100%; max-width:1100px;">`+`<div class="version-label">V:1E.01</div>`;
+    } else if (type === 'short2full') {
+      surface.innerHTML = `<h3>Short Form to Full Form</h3>
+        <input type="text" placeholder="Enter short form e.g. H" id="s2f">
+        <button onclick="convertShortToFull()">Convert</button>
+        <p id="s2fResult"></p>`+
+        `<div class="version-label">V:1E.01</div>`;
+    } else if (type === 'full2short') {
+      surface.innerHTML = `<h3>Full Form to Short Form</h3>
+        <input type="text" placeholder="Enter full name e.g. Hydrogen" id="f2s">
+        <button onclick="convertFullToShort()">Convert</button>
+        <p id="f2sResult"></p>`+ 
+        `<div class="version-label">V:1E.01</div>`;
+    } else if (type === 'elementdetails') {
+      surface.innerHTML = `<h3>Element Details</h3><p>Example: Hydrogen - Atomic Number: 1, Symbol: H, Atomic Mass: 1.008...</p>`+`<div class="version-label">V:1E.01</div>`;
+    } else if (type === 'webinfo') {
+      surface.innerHTML = `<h3>Website Information</h3>
+        <ul>
+          <li><strong>Website Name:</strong> Information of Element</li>
+          <li><strong>Purpose:</strong> For student knowledge</li>
+          <li><strong>Made By:</strong> SANABIL ANSARI</li>
+          <li><strong>Language:</strong> English</li>
+          <li><strong>Date:</strong> 19 May 2025</li>
+          <li><strong>Version:</strong> 1E.01</li>
+          <li><strong>Contact:</strong> ansarisanabil@44gmail.com</li>
+          <li><strong>Special Thanks:</strong> (AI) Amir Iman, Karan Deep</li>
+          <p><h2>NEWSES!</h2></p>
+          <li><strong>NEXT UPDATE UPCOMING! :</strong> in sep 24 2025. in update clear "detail of element" glitch. and add 20 more elements name.
+        </ul>`;
+    } else if (type === 'creatorinfo') {
+      surface.innerHTML = `<h3>Creator Information</h3>
+        <ul>
+          <li><strong>Name:</strong> SANABIL ANSARI</li>
+          <li><strong>From:</strong> Mumbai, India</li>
+          <li><strong>Background:</strong> Self-taught coder</li>
+          <li><strong>Goal:</strong> Build a large website and collaborate with developers</li>
+          <li><strong>Passion:</strong> Helping students learn science through simple, smart tools</li>
+        </ul>`;
+    }
+  }
+
+  function convertShortToFull() {
+    const val = document.getElementById("s2f").value.trim().toLowerCase();
+    const data = {
+    h: "Hydrogen", he: "Helium", li: "Lithium", be: "Beryllium", b: "boron", c: "carbon", n: "nitrogen", o: "oxygen", f: "fluorine",
+     ne: "neon", na:"sodium" , mg:"magnesium", al:"aluminium" , si:"silicon" ,p:"phosphorus" , s:"sulfur" , cl:"chlorine" , ar:"argon" ,
+      k:"potassium" , ca:"calcium" , sc:"scandium" , ti:"titanium" ,
+    v:"vanadium" , cr:"chromium", mn:"mangenese", fe:"iron" ,co:"cobalt",ni:"nickel", cu:"copper" , zn:"zinc"
+      // aur bhi elements yahan add kar sakte ho
+    };
+    const result = data[val] || "Not Found";
+    document.getElementById("s2fResult").textContent = result;
+  }
+
+  function convertFullToShort() {
+    const val = document.getElementById("f2s").value.trim().toLowerCase();
+    const data = {
+      hydrogen: "H", helium: "He", lithium: "Li", beryllium: "Be",boron:"b",carbon:"c", nitrogen:"n" , oxygen:"o" ,fluorine:"f" ,neon:"ne",
+      sodium:"na" , magnesium:"mg" , aluminium:"al" , silicon:"si" , phosphorus:"p" , sulfur:"s" , chlorine:"cl" , argon:"ar" ,potassium:"k", calcium:"ca"
+
+      
+      // aur bhi elements yahan add kar sakte ho
+    };
+    const result = data[val] || "Not Found";
+    document.getElementById("f2sResult").textContent = result;
+  }
+</script>
+
+</body>
+</html>
