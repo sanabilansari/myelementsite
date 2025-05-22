@@ -18,5 +18,5 @@ An educational site for 9th–10th students
 ---
 ## 🔗 Live Demo
 
-[Click here to open the element website](https://sanabilansari.github.io/myelementsite/)
+[Click here to open the element website](https://sanabilansari.github.io/myelementsite/) ||
 [Click here to open the form website](https://sanabilansari.github.io/resisterform/)
