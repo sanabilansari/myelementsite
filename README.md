@@ -1,4 +1,4 @@
-# myelementsite
+![image](https://github.com/user-attachments/assets/4ade085c-ba6b-4824-b994-fd211e286bf2)# myelementsite
 An educational site for 9th–10th students
 <h2 align="center">Hi there, I'm Sanabil Ansari 👋</h2>
 
@@ -26,4 +26,6 @@ An educational site for 9th–10th students
 
 ![Website Demo](ezgif-19893f2f1b0778.gif)
 
+## Always preparing a new plan
 
+![Uploading htcode.png…]()
