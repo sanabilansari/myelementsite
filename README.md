@@ -23,5 +23,5 @@ An educational site for 9th–10th students
 
 ## 🎬 Website Demo
 
-![Element Website Demo]enter your name(./readgi.gif)
-
+![Element Website Demo](./readgi.gif)
+enter your name
