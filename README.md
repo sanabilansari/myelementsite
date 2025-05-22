@@ -23,5 +23,5 @@ An educational site for 9th–10th students
 
 ## 🎬 Website Demo
 
-![Element Website Demo](./readgi.gif)
-click on elementsite and enter your name and explore all.
+<video src="readgi.mp4" autoplay loop muted playsinline width="700">
+</video>
