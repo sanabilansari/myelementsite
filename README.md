@@ -28,4 +28,6 @@ An educational site for 9th–10th students
 
 ## Always preparing a new plan
 
-![Uploading htcode.png…]()
+![Plan Image](htcode.png)
+
+**Always preparing a new plan**
