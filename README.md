@@ -18,11 +18,11 @@ An educational site for 9th–10th students
 ---
 ## 🔗 Live Demo
 
-🚀 **[Click here to open the element site](https://sanabilansari.github.io/myelementsite/)** || 
-📝 **[Click here to open the form website](https://sanabilansari.github.io/resisterform/)** ||
+🚀 **[Click here to open the element site](https://sanabilansari.github.io/myelementsite/)**
+📝 **[Click here to open the form website](https://sanabilansari.github.io/resisterform/)** 
 
 ## 🎬 Website Demo
-### 🔄 Website Demo (GIF)
+
 ![Website Demo](ezgif-19893f2f1b0778.gif)
 
 
