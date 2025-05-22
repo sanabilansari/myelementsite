@@ -11,9 +11,10 @@ An educational site for 9th–10th students
 - 🏫 **Education:** Completed 10th Grade  
 - 💻 **Skills:** HTML, CSS, Python  
 - 🎯 **Goal:** Make human work easier and faster through smart web solutions  
-- 📬 **Email:** [ansarisanabil44@gmail.com](mailto:ansarisanabil44@gmail.com)  
+- 📬 **for collab/Email:** [ansarisanabil44@gmail.com](mailto:ansarisanabil44@gmail.com)  
 - 🌐 **Live Website:** [sanabilansari.github.io/resisterform](https://sanabilansari.github.io/resisterform)  
 - 💬 **Quote:** _"Knowledge is the key to success. Support and spread knowledge to all."_
+-  🏫 **Company:** want to join any 
 
 ---
 ## 🔗 Live Demo
