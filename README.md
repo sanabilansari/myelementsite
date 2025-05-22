@@ -23,4 +23,7 @@ An educational site for 9th–10th students
 
 ## 🎬 Website Demo
 
-<video src="readgi.gif" autoplay loop muted playsinline width="700"></video>
+<video width="320" height="240" autoplay loop muted>
+  <source src="readgi.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
