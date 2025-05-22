@@ -16,3 +16,7 @@ An educational site for 9th–10th students
 - 💬 **Quote:** _"Knowledge is the key to success. Support and spread knowledge to all."_
 
 ---
+## 🔗 Live Demo
+
+[Click here to open the website](https://sanabilansari.github.io/myelementsite/)
+[Click here to open the website](https://sanabilansari.github.io/resisterform/)
